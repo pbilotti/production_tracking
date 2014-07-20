@@ -1,122 +1,140 @@
 ﻿<!doctype html>
 <html>
 <head>
-  <meta charset="utf-8" />
-  <title>Production Tracking Monitor</title>
-  <link rel="stylesheet" href="Styles/index.css" />
-  <script src="Scripts/jquery-min.js"></script>
-  <script src="Scripts/hora.js"></script>
-  <script src="Scripts/main.js"></script>
+    <meta charset="utf-8" />
+    <title>Production Tracking Monitor</title>
+    <link rel="stylesheet" href="Styles/index.css" />
+    <script src="Scripts/jquery-min.js"></script>
+    <script src="Scripts/fittext.js"></script>
+    <script src="Scripts/hora.js"></script>
+    <script src="Scripts/main.js"></script>
+
 </head>
 
 <body class="body">
-  <div id="todo" class="todo">
-    <div id="altas" class="caja">
-      <div id="altascont" class="cont"></div>
-      <div class="lowinfo">
-        <div id="altasright" class="right"></div>
-        <div id="altasleft" class="left"></div>
-      </div>
-      <p class="titulo">altas&nbsp;</p>
+
+    <div id="altas" class="box">
+        <div class="title outertitle"><p class="innertitle">altas&nbsp;</p></div>
+        <div class="cont outertitle"><p id="altascont" class="innertitle">22</p></div>
+        <div class="lowinfo outertitle">
+            <div id="altasright" class="right innertitle">34</div>
+            <div id="altasleft" class="left innertitle">23%</div>
+        </div>
     </div>
-    <div class="flecha flecha-1">
-      <div id="altas_inyectado" class="circulo"></div>
-      <div class="linea"></div>
+
+    <div class="arrow arrow-1">
+        <div id="altas_inyectado" class="outertitle circle"><p id="altas_inyectado_cont" class="innertitle"></p></div>
+        <div class="linea"></div>
     </div>
-    <div id="inyectado" class="caja">
-      <div id="inyectadocont" class="cont"></div>
-      <div class="lowinfo">
-        <div id="inyectadoright" class="right"></div>
-        <div id="inyectadoleft" class="left"></div>
-      </div>
-      <p class="titulo">inyectado&nbsp;</p>
+
+    <div id="inyectado" class="box">
+        <div class="title outertitle"><p class="innertitle">inyectado&nbsp;</p></div>
+        <div class="cont outertitle"><p id="inyectadocont" class="innertitle"></p></div>
+        <div class="lowinfo outertitle">
+            <div id="inyectadoright" class="right innertitle"></div>
+            <div id="inyectadoleft" class="left innertitle"></div>
+        </div>
     </div>
-    <div class="flecha flecha-2">
-      <div id="inyectado_cagadora" class="circulo"></div>
-      <div class="linea"></div>
+
+    <div class="arrow arrow-2">
+        <div id="inyectado_cagadora" class="outertitle circle"><p id="inyectado_cagadora_cont" class="innertitle"></p></div>
+        <div class="linea"></div>
     </div>
-    <div id="cargadora" class="caja">
-      <div id="cargadoracont" class="cont"></div>
-      <div class="lowinfo">
-        <div id="cargadoraright" class="right"></div>
-        <div id="cargadoraleft" class="left"></div>
-      </div>
-      <p class="titulo">cargadora&nbsp;</p>
+
+    <div id="cargadora" class="box">
+        <div class="title outertitle"><p class="innertitle">cargadora&nbsp;</p></div>
+        <div class="cont outertitle"><p id="cargadoracont" class="innertitle"></p></div>
+        <div class="lowinfo outertitle">
+            <div id="cargadoraright" class="right innertitle"></div>
+            <div id="cargadoraleft" class="left innertitle"></div>
+        </div>
     </div>
-    <div class="flecha flecha-3">
-      <div id="cargadora_electrico" class="circulo"></div>
-      <div class="linea2"></div>
+
+    <div class="arrow arrow-3">
+        <div id="cargadora_electrico" class="outertitle circle"><p id="cargadora_electrico_cont" class="innertitle"></p></div>
+        <div class="linea2"></div>
     </div>
-    <div id="electrico" class="caja">
-      <div id="electricocont" class="cont"></div>
-      <div class="lowinfo">
-        <div id="electricoright" class="right"></div>
-        <div id="electricoleft" class="left"></div>
-      </div>
-      <p class="titulo">el&eacute;ctrico&nbsp;</p>
+
+    <div id="electrico" class="box">
+        <div class="title outertitle"><p class="innertitle">eléctrico&nbsp;</p></div>
+        <div class="cont outertitle"><p id="electricocont" class="innertitle"></p></div>
+        <div class="lowinfo outertitle">
+            <div id="electricoright" class="right innertitle"></div>
+            <div id="electricoleft" class="left innertitle"></div>
+        </div>
     </div>
-    <div class="flecha flecha-4">
-      <div id="electrico_controlfrio" class="circulo"></div>
-      <div class="linea3"></div>
+
+    <div class="arrow arrow-4">
+        <div id="electrico_controlfrio" class="outertitle circle"><p id="electrico_controlfrio_cont" class="innertitle"></p></div>
+        <div class="linea3"></div>
     </div>
-    <div id="controlfrio" class="caja">
-      <div id="controlfriocont" class="cont"></div>
-      <div class="lowinfo">
-        <div id="controlfrioright" class="right"></div>
-        <div id="controlfrioleft" class="left"></div>
-      </div>
-      <p class="titulo">control frío&nbsp;</p>
+
+    <div id="controlfrio" class="box">
+        <div class="title outertitle"><p class="innertitle">control frío&nbsp;</p></div>
+        <div class="cont outertitle"><p id="controlfriocont" class="innertitle"></p></div>
+        <div class="lowinfo outertitle">
+            <div id="controlfrioright" class="right innertitle"></div>
+            <div id="controlfrioleft" class="left innertitle"></div>
+        </div>
     </div>
-    <div class="flecha flecha-5">
-      <div id="controlfrio_embalaje" class="circulo"></div>
-      <div class="linea"></div>
+
+    <div class="arrow arrow-5">
+        <div id="controlfrio_embalaje" class="outertitle circle"><p id="controlfrio_embalaje_cont" class="innertitle"></p></div>
+        <div class="linea"></div>
     </div>
-    <div id="embalaje" class="caja">
-      <div id="embalajecont" class="cont"></div>
-      <div class="lowinfo">
-        <div id="embalajeright" class="right"></div>
-        <div id="embalajeleft" class="left"></div>
-      </div>
-      <p class="titulo">embalaje&nbsp;</p>
+
+    <div id="embalaje" class="box">
+        <div class="title outertitle"><p class="innertitle">embalaje&nbsp;</p></div>
+        <div class="cont outertitle"><p id="embalajecont" class="innertitle"></p></div>
+        <div class="lowinfo outertitle">
+            <div id="embalajeright" class="right innertitle"></div>
+            <div id="embalajeleft" class="left innertitle"></div>
+        </div>
     </div>
-    <div class="flecha flecha-6">
-      <div id="embalaje_almacen" class="circulo"></div>
-      <div class="linea"></div>
+
+    <div class="arrow arrow-6">
+        <div id="embalaje_almacen" class="outertitle circle"><p id="embalaje_almacen_cont" class="innertitle"></p></div>
+        <div class="linea"></div>
     </div>
-    <div id="almacen" class="caja">
-      <div id="almacencont" class="cont"></div>
-      <div class="lowinfo">
-        <div id="almacenright" class="right"></div>
-        <div id="almacenleft" class="left"></div>
-      </div>
-      <p class="titulo">almacen&nbsp;</p>
+
+    <div id="almacen" class="box">
+        <div class="title outertitle"><p class="innertitle">almacen&nbsp;</p></div>
+        <div class="cont outertitle"><p id="almacencont" class="innertitle"></p></div>
+        <div class="lowinfo outertitle">
+            <div id="almacenright" class="right innertitle"></div>
+            <div id="almacenleft" class="left innertitle"></div>
+        </div>
     </div>
+
     <div class="foot">
-      <div id="turno" class="info">
-        <div id="turnocont" class="cont"></div>
-        <p class="titulo">turno</p>
-      </div>
-      <div id="hora" class="info">
-        <div id="horacont" class="cont"></div>
-        <p class="titulo">hora</p>
-      </div>
-      <div id="wip" class="info">
-        <div id="wipcont" class="cont"></div>
-        <p class="titulo">wip</p>
-      </div>
-      <div id="producido" class="info">
-        <div id="producidocont" class="cont"></div>
-        <p class="titulo">producido</p>
-      </div>
-      <div id="marquesina" class="marquesina">
-	 <div class="scroller">
-	   <div>Se encuentran liquidados los haberes del mes de
-	     junio</div>
-	   <div> -- </div>
-	   <div>Otra información relevante</div>
-	 </div>
-      </div>
+        <div id="turno" class="info">
+            <div class="title outertitle"><p class="innertitle">turno&nbsp;</p></div>
+            <div class="cont outertitle"><p id="turnocont" class="innertitle"></p></div>
+        </div>
+        <div id="hora" class="info">
+            <div class="title outertitle"><p class="innertitle">hora&nbsp;</p></div>
+            <div class="cont outertitle"><p id="horacont" class="innertitle"></p></div>
+        </div>
+        <div id="wip" class="info">
+            <div class="title outertitle"><p class="innertitle">wip&nbsp;</p></div>
+            <div class="cont outertitle"><p id="wipcont" class="innertitle"></p></div>
+        </div>
+        <div id="producido" class="info">
+            <div class="title outertitle"><p class="innertitle">producido&nbsp;</p></div>
+            <div class="cont outertitle"><p id="producidocont" class="innertitle"></p></div>
+        </div>
+        <div id="marquee" class="marquee">
+            <div class="scroller">
+                <div>
+                    Se encuentran liquidados los haberes del mes de
+                    junio
+                </div>
+                <div> -- </div>
+                <div>Otra información relevante</div>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
+<script src="Scripts/fittext-specs.js"></script>
+
 </html>

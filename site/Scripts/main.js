@@ -78,7 +78,7 @@ function getFlecha(id, json) {
 
     var flecha = json[id];
     
-    $('#' + id).text(flecha);
+    $('#' + id + "_cont").text(flecha);
     $('#' + id).css({ 'backgroundColor': "rgb(99, 184, 85)" });
 
 }

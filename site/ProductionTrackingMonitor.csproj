@@ -59,6 +59,8 @@
   <ItemGroup>
     <Content Include="FetchDBWebService.asmx" />
     <Content Include="Index.html" />
+    <Content Include="Scripts\fittext-specs.js" />
+    <Content Include="Scripts\fittext.js" />
     <Content Include="Scripts\hora.js" />
     <Content Include="Scripts\jquery-min.js" />
     <Content Include="Scripts\main.js" />
